@@ -9,4 +9,10 @@ Feature: Login Page
   And A user clicks on the login button
   Then A user will be logged in
 
+  Scenario: Locked User
+  Given A users enters to the login Page
+  When A user enters the username "locked_out_user"
+  And A user enters the password "secret_sauce"
+  And A user click the login button
+  Then A user will receive a locked out message
   
